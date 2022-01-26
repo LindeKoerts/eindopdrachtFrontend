@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.error-text {
+    color: red;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    font-style: italic;
+}

@@ -16,15 +16,14 @@ function NavBarResp() {
 
     return (
         <nav className={styles.nav}>
-            <NavLink className={styles['logo-link']} exact to='/'>
-                <h1 className={styles.logo}>Let's Cook</h1>
+            <NavLink className="logo-link" exact to='/'>
+                <h1 className="logo">#WhatToWear.</h1>
             </NavLink>
 
             {
                 showMenu &&
                 (!isAuth ?
                     <ul className={styles['nav-items']}>
-                        <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/"><h3>#WhatToWear.</h3></NavLink></li>
                         <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/opeenfiets">Op de fiets</NavLink></li>
                         <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/eenstad"> Een stad</NavLink></li>
                         <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/contact">Contact</NavLink></li>
@@ -33,7 +32,6 @@ function NavBarResp() {
                     </ul>
                     :
                     <ul className={styles['nav-items']}>
-                        <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/"><h3>#WhatToWear</h3></NavLink></li>
                         <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/opeenfiets">Op een fiets</NavLink></li>
                         <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/eenstad">Een stad</NavLink></li>
                         <li className={styles['nav-item']}><NavLink className={styles['nav-link']} activeClassName={styles['active-nav-item']} exact to="/contact">contact</NavLink></li>
