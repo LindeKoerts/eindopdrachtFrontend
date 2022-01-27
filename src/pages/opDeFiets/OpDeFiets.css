@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.fiets {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.whitebike {
+    background-color: white;
+    border-radius: 2em;
+    padding: 1em;
+    width: 98%;
+    height: 80em;
+}
+
+.route {
+    width: 35%;
+    padding: 1px;
+    margin-left: 5em;
+
+}
+
+.weather-city{
+    float: left;
+    width: 48%;
+    padding: 1px;
+
+}
+
+.weather-item1 {
+    background-color: white;
+    border-radius: 2em;
+    padding: 3%;
+    left: 3em;
+
+}
+
+.weather-item2 {
+    background-color: white;
+    border-radius: 2em;
+    padding: 3%;
+    right: 3em;
+}
+
+.inbetween {
+    height: 5em;
+
+}

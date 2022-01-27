@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.inlog {
+    background-color: white;
+    border-radius: 2em;
+    padding: 1em;
+    width: 98%;
+    height: 60em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.inlog > img {
+    position: absolute;
+    top: 10em;
+    left: 0.8em;
+    width: 40%;
+    padding: 5em;
+}
+

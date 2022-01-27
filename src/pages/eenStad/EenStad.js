@@ -4,6 +4,8 @@ import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
 import MetricSlider from "../../components/metricSlider/MetricSlider";
 import WeekWeather from "../../components/weekWeather/WeekWeather";
+import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
+import DayWeather from "../../components/dayWeather/DayWeather";
 
 const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
@@ -48,23 +50,32 @@ function Eenstad() {
 
                     <span className="location-details">
             {Object.keys(weatherData).length > 0 &&
+
+
             <>
                 <h2>{weatherData.weather[0].description}</h2>
                 <h3>{weatherData.name}</h3>
                 <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
-                <h1>{weatherData.main.feels_like}</h1>
+                <h1>{kelvinToMetric(weatherData.main.feels_like)}</h1>
                 <h1>{weatherData.main.humidity}</h1>
                 <h1>{weatherData.main.pressure}</h1>
                 <h1>{weatherData.wind.deg}</h1>
                 <h1>{weatherData.wind.gust}</h1>
                 <h1>{weatherData.wind.speed}</h1>
 
+
             </>
             }
           </span>
                 </div>
 
+
+
+
+
+
                 <WeekWeather coordinates={weatherData.coord}/>
+                <DayWeather coordinates={weatherData.coord}/>
 
                 <MetricSlider/>
             </div>

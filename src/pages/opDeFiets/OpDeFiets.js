@@ -1,70 +1,68 @@
-import React, {useContext, useEffect, useState} from "react";
-import {TempContext} from "../../context/TempContext";
-import axios from "axios";
-import SearchBar from "../../components/searchBar/SearchBar";
-import MetricSlider from "../../components/metricSlider/MetricSlider";
-import DayWeather from "../../components/dayWeather/DayWeather";
-
-
-const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
+import React from "react";
+import NavBar from "../../components/navBar/NavBar";
+import bike from "../../assets/pictures/bike.png";
+import Footer from "../../components/footer/Footer";
+import staaf from "../../assets/pictures/route.png";
+import OpDeFietsWeather from "../../components/opDeFiets/OpDeFietsWeather";
+import './OpDeFiets.css';
 
 function OpDeFiets() {
-    const [weatherData, setWeatherData] = useState({});
-    const [location, setLocation] = useState('');
-    const [error, toggleError] = useState(false);
-
-    const { kelvinToMetric } = useContext(TempContext);
-
-    useEffect(() => {
-        async function fetchData() {
-            toggleError(false);
-
-            try {
-                const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location},nl&appid=${apiKey}&lang=nl`);
-                console.log(result.data);
-                setWeatherData(result.data);
-            } catch (e) {
-                console.error(e);
-                toggleError(true);
-            }
-        }
-
-        if (location) {
-            fetchData();
-        }
-    }, [location]);
 
     return (
-        <>
-            <div className="weather-container">
+        <main>
 
-                {/*HEADER -------------------- */}
-                <div className="weather-header">
-                    <SearchBar setLocationHandler={setLocation}/>
-                    {error &&
-                    <span className="wrong-location-error">
-              Oeps! Deze locatie bestaat niet
-            </span>
-                    }
+            <article className= "whitebike">
 
-                    <span className="location-details">
-            {Object.keys(weatherData).length > 0 &&
-            <>
-                <h2>{weatherData.weather[0].description}</h2>
-                <h3>{weatherData.name}</h3>
-                <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
-            </>
-            }
-          </span>
-                </div>
+                <NavBar/>
+                <img className="fiets" src={bike} alt="grote foto met fiets"/>
 
-                <DayWeather coordinates={weatherData.coord}/>
+                <h2>Op de</h2>
+                <img className="route" src={staaf} alt="uitgestippelde route"/>
+                <h2>fiets</h2>
 
-                <MetricSlider/>
+            </article>
+
+            <div className="inbetween">
+                <br/>
+                <br/>
+
             </div>
 
+            <section className="next">
 
-        </>
+                <article className="weather-city">
+
+                    <div className="weather-item1">
+
+            <OpDeFietsWeather/>
+
+                    </div>
+
+                </article>
+
+                <article className="weather-city">
+
+                    <div className="weather-item2">
+
+            <OpDeFietsWeather/>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <div>
+                <h1>#WhatToWear.</h1>
+            </div>
+
+            <Footer/>
+
+        </main>
+
+
+
     );
 }
 

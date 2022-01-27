@@ -7,7 +7,7 @@ import { AuthContext } from "../../context/AuthContext";
 import InputField from "../inputField/InputField";
 import Button from "../button/Button";
 
-import styles from './LoginForm.css';
+import './LoginForm.css';
 
 const LoginForm = () => {
     const [credentialError, toggleCredentialError] = useState(false);
@@ -37,39 +37,45 @@ const LoginForm = () => {
     }
 
     return (
-        <form className={styles['login-form']} onSubmit={handleSubmit(handleFormSubmit)}>
-            <h1>Login</h1>
+        <form className="login-form" onSubmit={handleSubmit(handleFormSubmit)}>
+            <h2>Log in bij #WhatToWear.</h2>
 
             <InputField
-                labelText='Username'
+                labelText='Gebruikersnaam:'
                 inputId='username-input'
                 inputName='username'
-                placeholder="Username"
+                placeholder="Gebruikersnaam"
                 register={register}
                 errors={errors}
                 validationRules={{required: 'Username is required'}}
             />
+            <br/>
 
             <InputField
-                labelText='Password'
+                labelText='Wachtwoord'
                 inputType='password'
                 inputId='password-input'
                 inputName='password'
-                placeholder="Password"
+                placeholder="Wachtwoord"
                 register={register}
                 errors={errors}
                 validationRules={{required: 'Password is required'}}
             />
 
-            {credentialError && <p className={styles['error-text']}>Wrong credentials</p>}
+            {credentialError && <p className="error-text">Wrong credentials</p>}
 
-            <Button
-                buttonClass='register-button'
+            <br/>
+
+            <button
+                className='roze3'
             >
-                Login
-            </Button>
+                Log in
+            </button>
 
-            <p>Don't have an account yet? <Link to='/aanmelden' className={styles['signup-link']}>Sign up</Link></p>
+            <p>Nog geen account?</p>
+            <button className="paars">
+                <Link to='/aanmelden' className="signup-link">Aanmelden</Link>
+        </button>
         </form>
     );
 };

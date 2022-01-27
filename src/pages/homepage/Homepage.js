@@ -14,6 +14,7 @@ import Footer from "../../components/footer/Footer";
 import FooterResp from "../../components/footerResp/FooterResp";
 import Button from "../../components/button/Button";
 import {Link} from "react-router-dom";
+import inlog from "../../assets/pictures/img.png";
 
 
 function Homepage(){

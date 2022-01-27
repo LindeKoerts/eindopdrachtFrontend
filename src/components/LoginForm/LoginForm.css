@@ -1,0 +1,63 @@
+.login-form {
+    position: absolute;
+    top: 10em;
+    right: 0.8em;
+    width: 40%;
+    padding: 5em;
+}
+
+.error-text {
+    font-style: italic;
+    font-size: .8rem;
+    text-align: center;
+    color: red;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 300;
+    margin: 0 0 1rem 0;
+    color: black;
+}
+
+.paars {
+    border-radius: 3px;
+    background-color: #899DDD;
+    border: none;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    padding: 8px 15px;
+    width: 50%;
+}
+
+.roze3 {
+    border-radius: 3px;
+    background-color: #FCB4B4;
+    border: none;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    padding: 8px 15px;
+    width: 50%;
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .login-form{
+        width: 60%;
+    }
+
+}
+
+
