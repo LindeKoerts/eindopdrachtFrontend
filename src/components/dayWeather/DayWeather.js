@@ -20,8 +20,6 @@ function DayWeather({ coordinates }) {
                 const result = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely,current,daily&appid=${apiKey}`);
                 setForecasts([
                     result.data.hourly[3],
-                    result.data.hourly[5],
-                    result.data.hourly[7],
                 ]);
                 console.log(result.data);
             } catch (e) {
@@ -45,10 +43,7 @@ function DayWeather({ coordinates }) {
             <div className="chart">
                 {forecasts.map((forecast) => {
                     return <WeatherDetail
-                        key={forecast.dt}
-                        temp={forecast.temp}
                         type={forecast.weather[0].main}
-                        description={forecast.weather[0].description}
                     />
                 })}
             </div>
@@ -56,7 +51,7 @@ function DayWeather({ coordinates }) {
 
             <div className="legend">
                 {forecasts.map((forecast) => {
-                    return <span key={`${forecast.dt}-timestamp`}>{createTimeString(forecast.dt)}</span>
+                    return <span key={`${forecast.dt}-timestamp`}>{createTimeString}</span>
                 })}
             </div>
 

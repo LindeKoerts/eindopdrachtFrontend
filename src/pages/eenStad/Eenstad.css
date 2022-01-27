@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+main {
+    background-color: white;
+    border-radius: 2em;
+    padding: 1em;
+    width: 98%;
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weather-img {
+    left: 0.8em;
+    width: 300px;
+}
+
+.weather-header{
+    left: 10%;
+}
+
+.city-name {
+    left: 0.8em;
+}
+
+.discription {
+    left: 0.8em;
+}
+
+.temp {
+    left: 0.8em;
+}
+
+.first-row {
+    float: right;
+    width: 20%;
+    padding: 5px;
+
+}
+
+.second-row {
+    float: right;
+    width: 20%;
+    padding: 5px;
+}
+
+.third-row {
+    float: right;
+    width: 20%;
+    padding: 5px;
+
+
+}
+
+.box {
+    background-color: #899DDD ;
+    border: 3px;
+    border-radius: 1em;
+    height: 200px;
+    -webkit-box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.32);
+    box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.32);
+    padding: 0.8em;
+}
+
+.box {
+    text-align: center;
+    color: white;
+}
+
+.week {
+    height: auto;
+    float: top;
+    position: relative;
+}
+
+.week {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    margin: 6em;
+
+}
+
+.six {
+    height: auto;
+    float: top;
+    position: relative;
+
+
+}
+
+.six {
+    position: absolute;
+    top: 12em;
+    right: 0.8em;
+    margin: 6em;
+    width: 2000px;
+
+}

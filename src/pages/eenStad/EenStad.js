@@ -6,6 +6,8 @@ import MetricSlider from "../../components/metricSlider/MetricSlider";
 import WeekWeather from "../../components/weekWeather/WeekWeather";
 import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
 import DayWeather from "../../components/dayWeather/DayWeather";
+import NavBar from "../../components/navBar/NavBar";
+import Footer from "../../components/footer/Footer";
 
 const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
@@ -36,7 +38,13 @@ function Eenstad() {
     }, [location]);
 
     return (
-        <>
+
+        <section>
+
+        <main>
+
+        <NavBar/>
+
             <div className="weather-container">
 
                 {/*HEADER -------------------- */}
@@ -53,15 +61,40 @@ function Eenstad() {
 
 
             <>
-                <h2>{weatherData.weather[0].description}</h2>
-                <h3>{weatherData.name}</h3>
+                <br/>
+                <br/>
+                <h1 className="city-name">{weatherData.name}</h1>
+
+                <div className="discription">
+                    <h2>{weatherData.weather[0].description}</h2>
+                </div>
+
+                <div className="weather-img">
+                <DayWeather coordinates={weatherData.coord}/>
+                </div>
+
+                <div className="temp">
                 <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
-                <h1>{kelvinToMetric(weatherData.main.feels_like)}</h1>
-                <h1>{weatherData.main.humidity}</h1>
-                <h1>{weatherData.main.pressure}</h1>
-                <h1>{weatherData.wind.deg}</h1>
-                <h1>{weatherData.wind.gust}</h1>
-                <h1>{weatherData.wind.speed}</h1>
+                </div>
+
+                <div className="six">
+
+                <section className="first-row">
+                <h1 className="box">{kelvinToMetric(weatherData.main.feels_like)}</h1>
+                <h1 className="box">{weatherData.main.humidity}</h1>
+                </section>
+
+                <section className="second-row">
+                <h1 className="box">{weatherData.main.pressure}</h1>
+                <h1 className="box">{weatherData.wind.deg}</h1>
+                </section>
+
+                <section className="third-row">
+                <h1 className="box">{weatherData.wind.gust}</h1>
+                <h1 className="box">{weatherData.wind.speed}</h1>
+                </section>
+
+                </div>
 
 
             </>
@@ -69,17 +102,23 @@ function Eenstad() {
           </span>
                 </div>
 
-
-
-
-
-
+                <section className="week">
                 <WeekWeather coordinates={weatherData.coord}/>
-                <DayWeather coordinates={weatherData.coord}/>
+                </section>
+
 
                 <MetricSlider/>
+
+
             </div>
-        </>
+        </main>
+
+            <br/>
+            <br/>
+
+
+    <Footer/>
+        </section>
     );
 }
 

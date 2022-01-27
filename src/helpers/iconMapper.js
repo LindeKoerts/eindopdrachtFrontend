@@ -10,7 +10,7 @@ import { ReactComponent as Hail } from '../assets/icons/Hail.svg';
 import { ReactComponent as Storm } from '../assets/icons/Storm.svg';
 
 function iconMapper(weatherType) {
-    switch (weatherType) {
+    switch (weatherType){
         case 'Clear':
             return <Sunny/>;
         case 'Clouds':
