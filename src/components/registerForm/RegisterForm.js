@@ -7,7 +7,7 @@ import {toast} from "react-toastify";
 import InputField from "../inputField/InputField";
 import Button from "../button/Button";
 
-import styles from './RegisterForm.css';
+import './RegisterForm.css';
 
 const RegisterForm = () => {
     const history = useHistory()
@@ -37,26 +37,31 @@ const RegisterForm = () => {
     }
 
     return (
-        <form className={styles['register-form']} onSubmit={handleSubmit(handleFormSubmit)}>
-            <h1>Register</h1>
+
+        <form className="register-form" onSubmit={handleSubmit(handleFormSubmit)}>
+            <h1 className="title">AANMELDEN BIJ #WHATTOWEAR.</h1>
 
             <InputField
-                labelText='Username'
+                labelText='Gebruikersnaam'
                 inputId='username-input'
                 inputName='username'
-                placeholder="Username (min. 6)"
+                placeholder="Gebruikersnaam (min. 6)"
                 register={register}
                 errors={errors}
                 validationRules={
                     {
-                        required: 'Username is required',
+                        required: 'Gebruikersnaam is noodzakelijk',
                         minLength: {
                             value: 6,
-                            message: 'Username should be at least 6 characters '
+                            message: 'Gebruikers naam moet minimaal 6 karakters bevatten '
                         }
                     }
                 }
             />
+
+
+            <br/>
+            <br/>
 
             <InputField
                 labelText='Email'
@@ -66,35 +71,41 @@ const RegisterForm = () => {
                 placeholder="Email"
                 register={register}
                 errors={errors}
-                validationRules={{required: 'Email is required'}}
+                validationRules={{required: 'Email is noodzakelijk'}}
             />
 
+            <br/>
+            <br/>
+
+
             <InputField
-                labelText='Password'
+                labelText='Wachtwoord'
                 inputType='password'
                 inputId='password-input'
                 inputName='password'
-                placeholder="Password (min. 6)"
+                placeholder="Wachtwoord (min. 6)"
                 register={register}
                 errors={errors}
                 validationRules={
                     {
-                        required: 'Password is required',
+                        required: 'Wachtwoord is noodzakelijk',
                         minLength: {
                             value: 6,
-                            message: 'Password should be at least 6 characters '
+                            message: 'Wachtwoord moet minimaal 6 karakters bevatten '
                         }
                     }
                 }
             />
 
-            <Button
-                buttonClass='register-button'
+            <br/>
+
+            <button
+                className="roze"
             >
                 Register
-            </Button>
+            </button>
 
-            <p>Already have an account? <Link to='/inloggen' className={styles['signin-link']}>Sign in</Link></p>
+            <p>Heb je al een account? <Link to='/inloggen' className="signin-link">Log in</Link></p>
         </form>
     );
 }

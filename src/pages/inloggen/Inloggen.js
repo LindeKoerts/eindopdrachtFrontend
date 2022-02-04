@@ -16,9 +16,6 @@ const LoginPage = () => {
     return (
         <main>
 
-
-
-
         <section className="inlog">
             { screenWidth < 950 ? <NavBarResp /> : <NavBar /> }
 

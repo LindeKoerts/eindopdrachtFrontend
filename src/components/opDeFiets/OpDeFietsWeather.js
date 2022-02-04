@@ -57,7 +57,10 @@ function OpDeFietsWeather() {
           </span>
         </div>
 
+
+        <div className="weather-img">
         <DayWeather coordinates={weatherData.coord}/>
+        </div>
 
         <MetricSlider/>
     </div>

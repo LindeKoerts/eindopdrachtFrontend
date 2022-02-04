@@ -8,6 +8,9 @@ import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
 import DayWeather from "../../components/dayWeather/DayWeather";
 import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
+import FooterResp from "../../components/footerResp/FooterResp";
+import NavBarResp from "../../components/navBarResp/NavBarResp";
+import {ScreenWidthContext} from "../../context/screenWidthContext";
 
 const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
@@ -17,6 +20,7 @@ function Eenstad() {
     const [error, toggleError] = useState(false);
 
     const { kelvinToMetric } = useContext(TempContext);
+    const { screenWidth } = useContext(ScreenWidthContext);
 
     useEffect(() => {
         async function fetchData() {
@@ -41,20 +45,30 @@ function Eenstad() {
 
         <section>
 
-        <main>
+        <main className="main-eenstad">
 
-        <NavBar/>
+            {screenWidth < 1200 ? <NavBarResp /> : <NavBar />}
+
+            <div>
+                <h1 className="header-bike">EEN STAD</h1>
+                <h3 className="intro">De weersvoorspelling in jouw omgeving!</h3>
+
+
+            </div>
+
 
             <div className="weather-container">
 
                 {/*HEADER -------------------- */}
-                <div className="weather-header">
+                <div className="weather-header1">
+                    <div className="zoek">
                     <SearchBar setLocationHandler={setLocation}/>
                     {error &&
                     <span className="wrong-location-error">
               Oeps! Deze locatie bestaat niet
             </span>
                     }
+                    </div>
 
                     <span className="location-details">
             {Object.keys(weatherData).length > 0 &&
@@ -63,6 +77,7 @@ function Eenstad() {
             <>
                 <br/>
                 <br/>
+                <div className="start">
                 <h1 className="city-name">{weatherData.name}</h1>
 
                 <div className="discription">
@@ -76,26 +91,30 @@ function Eenstad() {
                 <div className="temp">
                 <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
                 </div>
+                </div>
 
                 <div className="six">
 
                 <section className="first-row">
-                <h1 className="box">{kelvinToMetric(weatherData.main.feels_like)}</h1>
-                <h1 className="box">{weatherData.main.humidity}</h1>
+                <h1 className="box"><p>Gevoelstemperatuur:</p>{kelvinToMetric(weatherData.main.feels_like)}</h1>
+                <h1 className="box"><p>Vochtigheid:</p>{weatherData.main.humidity}</h1>
                 </section>
 
                 <section className="second-row">
-                <h1 className="box">{weatherData.main.pressure}</h1>
-                <h1 className="box">{weatherData.wind.deg}</h1>
+                <h1 className="box"><p>Luchtdruk</p>{weatherData.main.pressure}</h1>
+                <h1 className="box"><p>Windrichting</p>{weatherData.wind.deg}</h1>
                 </section>
 
                 <section className="third-row">
-                <h1 className="box">{weatherData.wind.gust}</h1>
-                <h1 className="box">{weatherData.wind.speed}</h1>
+                    <h1 className="box"><p>Intensiteit wind:</p>{weatherData.wind.gust}</h1>
+                <h1 className="box"><p>Windkracht</p>{weatherData.wind.speed}</h1>
                 </section>
 
                 </div>
 
+                <div className="metric">
+                    <MetricSlider/>
+                </div>
 
             </>
             }
@@ -107,17 +126,17 @@ function Eenstad() {
                 </section>
 
 
-                <MetricSlider/>
-
 
             </div>
         </main>
 
+
+
             <br/>
             <br/>
 
 
-    <Footer/>
+            {screenWidth < 950 ? <FooterResp /> : <Footer />}
         </section>
     );
 }

@@ -17,3 +17,16 @@
     padding: 5em;
 }
 
+
+@media screen and (max-width: 950px) {
+    .inlog >img {
+        margin-top: 25em;
+        position: absolute;
+        top: 10em;
+        left: 10%;
+        width: 60%;
+        padding: 5em;
+
+    }
+}
+

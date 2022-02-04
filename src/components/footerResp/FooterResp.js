@@ -1,6 +1,7 @@
 import React from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
+import './FooterResp.css'
 
 function FooterResp() {
 
@@ -16,7 +17,7 @@ function FooterResp() {
                 </aside>
 
                 <aside className="column2Resp">
-                    <h3 className="headerResp">contact</h3>
+                    <h3 className="headerResp">Contact</h3>
                     <p className="footer-textResp">Met ons systeem zorg jij ervoor dat je nooit meer nat geregend, oververhit of te koud naar buiten gaat. De perfecte voorbereiden voor jou buitentrip. En dat is Nederland natuurlijk geen overbodige luxe. </p>
                 </aside>
 
@@ -27,10 +28,6 @@ function FooterResp() {
 
             </div>
 
-            <div
-            >
-                <HiOutlineMenuAlt4 size={25}/>
-            </div>
 
         </article>
 

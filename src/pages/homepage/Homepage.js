@@ -24,9 +24,9 @@ function Homepage(){
     return(
         <main className="homepage">
 
-            <article className= "white">
+            <article className= "white-homepage">
 
-                {screenWidth < 950 ? <NavBarResp /> : <NavBar />}
+                {screenWidth < 1200 ? <NavBarResp /> : <NavBar />}
 
                 <div className="start-text">
                     <h1 className="text-resize"> De weerapp die jij</h1>
@@ -41,8 +41,11 @@ function Homepage(){
                     <p>Ja, je leest het goed! Nooit meer overhit, nat geregend of rood van de hagel op locatie aankomen. <strong>#WhatToWear. </strong>
                         helpt jou overleven in Nederland.</p>
 
-                    <button className="roze"> Aanmelden</button>
-                    <button className="roze"> Meer Informatie</button>
+                    <br/>
+
+                    <button className="roze">
+                        <Link to='/aanmelden'>Aanmelden</Link>
+                    </button>
 
                 </div>
 
@@ -64,7 +67,9 @@ function Homepage(){
 
                     <br/>
                     <br/>
-                    <button className="roze">Test het hier!</button>
+                    <button className="roze">
+                        <Link to='/aanmelden'>Test het hier!</Link>
+                        </button>
                 </p>
 
             </article>
@@ -109,7 +114,9 @@ function Homepage(){
                     <p>Aan de hand van jouw ingevulde gegevens laten wij de weersvoorspelling van die  dag zien. Aan de hand van verschillende factoren zorgen wij ervoor dat jij de juiste kledingadviezen krijgt. Dit doen wij aan de hand van icoontjes. De icoontjes geven aan wat jij die dag moet meenemen en geeft een suggestie wat je aan kan doen. Verschillende icoontjes hebben verschillende betekenissen en daarom  leggen wij je hier uit wat welk icoontje betekend zodat je echt goed voorbereid de deur uit gaat! Nog vragen? Je kunt altijd contact met ons opnemen:  </p>
 
                     <br/>
-                    <button className="roze"> Contact </button>
+                    <button className="roze">
+                        <Link to='/contact'>Contact</Link>
+                    </button>
                     <br/>
                     <br/>
 

@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-main {
+.main-eenstad {
     background-color: white;
     border-radius: 2em;
     padding: 1em;
     width: 98%;
+    height: 85em;
 }
 
-main {
+.main-eenstad {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,20 +17,21 @@ main {
     width: 300px;
 }
 
-.weather-header{
-    left: 10%;
+.weather-header1{
+    margin-left: 5em;
 }
 
-.city-name {
-    left: 0.8em;
+.start {
+    margin-top: 18em;
 }
 
-.discription {
-    left: 0.8em;
+.zoek {
+    position: absolute;
+    left: 43%;
 }
 
-.temp {
-    left: 0.8em;
+.metric {
+
 }
 
 .first-row {
@@ -49,12 +51,10 @@ main {
     float: right;
     width: 20%;
     padding: 5px;
-
-
 }
 
 .box {
-    background-color: #899DDD ;
+    background-color: #FCB4B4 ;
     border: 3px;
     border-radius: 1em;
     height: 200px;
@@ -76,7 +76,7 @@ main {
 
 .week {
     position: absolute;
-    top: 0.8em;
+    top: 21em;
     right: 0.8em;
     margin: 6em;
 
@@ -92,9 +92,147 @@ main {
 
 .six {
     position: absolute;
-    top: 12em;
+    top: 35em;
     right: 0.8em;
     margin: 6em;
     width: 2000px;
 
+}
+
+p {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1800px) {
+    .six {
+        position: absolute;
+        top: 35em;
+        right: 0.8em;
+        margin: 6em;
+        width: 1500px;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+    .six {
+        position: absolute;
+        top: 35em;
+        right: 0.8em;
+        margin: 6em;
+        width: 1000px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+    .six {
+        position: absolute;
+        top: 55em;
+        margin-left: 2em;
+        width: 800px;
+        left: 1%;
+    }
+
+    .week {
+        height: auto;
+        position: relative;
+    }
+
+    .week {
+        position: absolute;
+        top: 75em;
+        right: 0.8em;
+        left: 1%;
+    }
+
+    .week {
+        font-max-size: 12px;
+    }
+
+    .first-row {
+        float: left;
+        width: 25%;
+        padding: 5px;
+        margin-left: 2em;
+    }
+
+    .second-row {
+        float: left;
+        width: 25%;
+        padding: 5px;
+        margin-left: 2em;
+    }
+
+    .third-row {
+        float: left;
+        width: 25%;
+        padding: 5px;
+        margin-left: 2em;
+    }
+
+    .box > h1 {
+        font-size: 20px;
+    }
+    .box {
+        height: 100px;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .start {
+        position: absolute;
+        left: 30%;
+        margin-top: 8em;
+    }
+
+    .metric {
+        margin-top: 80em;
+    }
+
+    .main-eenstad {
+        height: 100em;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .third-row {
+        width: 6em;
+    }
+
+    .second-row {
+        width: 6em;
+    }
+
+    .first-row {
+        width: 6em;
+        margin-left: 0.5em;
+    }
+
+    .metric {
+        margin-top: 92em;
+    }
+
+    .six {
+        margin-top: 2em;
+    }
+
+    .week {
+        margin-top: 3.5em;
+    }
+
+    .zoek {
+        position: absolute;
+        left: 30%;
+    }
+
+    .main-eenstad {
+        height: 110em;
+    }
 }

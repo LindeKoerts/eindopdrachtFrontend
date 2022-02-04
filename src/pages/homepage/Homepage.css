@@ -9,7 +9,7 @@
     background-color: #FCB4B4;
     border: none;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 20px;
     padding: 8px 15px;
 
@@ -24,7 +24,7 @@ body {
     padding: 1em;
 }
 
-.white {
+.white-homepage {
     background-color: white;
     border-radius: 2em;
     padding: 1em;
@@ -32,7 +32,7 @@ body {
     height: 60em;
 }
 
-.white > img {
+.white-homepage > img {
     position: absolute;
     top: 10em;
     right: 0.8em;
@@ -51,7 +51,7 @@ body {
     color: black;
     margin-left: 7em;
     margin-top: 1em;
-    width: 50%;
+    width: 45%;
 
 }
 
@@ -70,7 +70,6 @@ body {
     margin-left: 5em;
     width: 600px;
     font-size: 23px;
-
 }
 
 .resize2 {
@@ -82,20 +81,19 @@ body {
 .resize2 {
     position: absolute;
     left: 0.8em;
-    width: 600px;
+    width: 30%;
     margin: 6em;
 }
 
 .heading2 {
     float: right;
     position: relative;
-
 }
 
 .heading2 {
     position: absolute;
     right: 0.8em;
-    width: 50%;
+    width: 40%;
     margin: 4.6em;
 }
 
@@ -104,7 +102,6 @@ body {
     color: black;
     width: 50%;
     font-size: 23px;
-
 }
 
 .text2 {
@@ -115,7 +112,7 @@ body {
 .text2{
     position: absolute;
     right: 0.8em;
-    width: 50%;
+    width: 40%;
     margin: 6em;
 }
 
@@ -151,7 +148,6 @@ body {
     position: relative;
     left: 0.8em;
     margin-left: 6em;
-
 }
 
 .row {
@@ -232,26 +228,151 @@ body {
     margin: 6em;
 }
 
-@media screen and (max-width: 950px) {
-    .white {
+@media screen and (max-width: 1400px) {
+    .white-homepage {
+        background-color: white;
+        border-radius: 2em;
+        padding: 1em;
+        width: 98%;
+        height: 45em;
     }
 
-    .blue{
+    .white-homepage > img {
+        position: absolute;
+        width: 50%;
+    }
 
+    .start-text > h1 {
+        font-size: 35px;
+        position: center;
+    }
+
+    .start-text > h2 {
+        font-size: 25px;
+        align-content: center;
+        width: 100%;
+    }
+
+    .homepage-text {
+        font-size: 20px;
+        width: 40%;
+    }
+
+    .blue {
+        width: 20em;
+    }
+
+    .heading2{
+        font-size: 18px;
+
+    }
+
+    .text2 {
+        font-size: 12px
+    }
+
+    .resize2 {
+        position: absolute;
+        width: 30%;
+    }
+
+    .row {
+        height: auto;
+        align-items:normal;
+
+    }
+
+    .column {
+        width: 20%;
+        padding: 5px;
+    }
+
+    .how-to {
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 20px;
+        padding: 3%;
+    }
+
+    .textpicture {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .resize3 {
+        width: 80%;
+        height: auto;
+        float: inside;
+        position: relative;
+        margin-left: 2em;
     }
 
     .white2 {
+       height: 25em;
+    }
+
+    .icon {
+        font-size: 15px;
+    }
+
+    .icon > p {
+        font-size: 12px;
+    }
+
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .white-homepage > img {
+        position: relative;
+        width: 100%;
+    }
+
+    .white-homepage {
+        height: 80em;
+    }
+
+    .start-text > h1 {
+        font-size: 25px;
+        position: center;
+    }
+
+    .start-text > h2 {
+        font-size: 15px;
+        align-content: center;
+        width: 100%;
+    }
+
+    .resize2 {
+        float: end;
+        width: 100%;
+    }
+
+    .resize3 {
+        width: 80%;
+        height: auto;
+        position: relative;
+        margin-left: 1em;
+    }
+
+    .white2 {
+        height: 18em;
+    }
+
+    .resize4 {
+        position: relative;
 
     }
 
-    .blue2{
 
-    }
+
 
 
 
 
 }
+
 
 
 

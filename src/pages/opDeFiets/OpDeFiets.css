@@ -5,7 +5,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 h2 {
@@ -17,39 +16,119 @@ h2 {
     border-radius: 2em;
     padding: 1em;
     width: 98%;
-    height: 80em;
+    height: 65em;
+}
+
+
+.weather-city{
+    padding: 1px;
+    width: 40%;
 }
 
 .route {
-    width: 35%;
-    padding: 1px;
-    margin-left: 5em;
-
+    width: 30%;
+    float: inside;
 }
 
-.weather-city{
-    float: left;
-    width: 48%;
-    padding: 1px;
-
-}
 
 .weather-item1 {
     background-color: white;
     border-radius: 2em;
-    padding: 3%;
-    left: 3em;
-
+    height: 50em;
+    padding: 30px;
+    width: 130em;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 .weather-item2 {
     background-color: white;
     border-radius: 2em;
-    padding: 3%;
-    right: 3em;
+    height: 50em;
+    padding: 30px;
+    width: 1600px;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
-.inbetween {
-    height: 5em;
+.next li {
+    display: inline-flex;
+    transition: all 0.3s ease 0s;
+    color: black;
+    padding: 0px 75px;
+    justify-content: center;
+    position: relative;
+}
+
+
+.header-bike {
+    font-family:'Montserrat', sans-serif;
+    color: #899DDD;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.intro {
+    font-family:'Montserrat', sans-serif;
+    color: black;
+    font-size: 20px;
+    text-align: center;
 
 }
+
+
+@media screen and (max-width: 1800px) {
+
+    .next li {
+        display: inline-flex;
+        transition: all 0.3s ease 0s;
+        color: black;
+        padding: 0px 60px;
+        justify-content: center;
+        position: relative;
+
+    }
+}
+
+@media screen and (max-width: 1800px) {
+
+    .next li {
+        display: inline-flex;
+        transition: all 0.3s ease 0s;
+        color: black;
+        padding: 0px 40px;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .next li {
+        align-items: center;
+        margin-left: 3.5em;
+}
+
+    .buttonResp {
+        justify-content: center;
+        margin-right: 6em;
+}
+    .header-bike {
+        font-size: 30px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    .whitebike {
+        height: 30em;
+    }
+
+}
+
+
+
+
+

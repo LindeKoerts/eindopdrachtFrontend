@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css"
+import {Link} from "react-router-dom";
 
 function Footer(){
 
@@ -12,11 +13,13 @@ function Footer(){
                 <aside className="column2">
                     <h3 className="header">Over ons</h3>
                     <p className="footer-text">Met ons systeem zorg jij ervoor dat je nooit meer nat geregend, oververhit of te koud naar buiten gaat. De perfecte voorbereiden voor jou buitentrip. En dat is Nederland natuurlijk geen overbodige luxe. </p>
-                    <button className="button">Aanmelden</button>
+                    <button className="button">
+                        <Link to='/aanmelden'>Aanmelden</Link>
+                       </button>
                 </aside>
 
                 <aside className="column2">
-                    <h3 className="header">contact</h3>
+                    <h3 className="header">Contact</h3>
                     <p className="footer-text">Met ons systeem zorg jij ervoor dat je nooit meer nat geregend, oververhit of te koud naar buiten gaat. De perfecte voorbereiden voor jou buitentrip. En dat is Nederland natuurlijk geen overbodige luxe. </p>
                 </aside>
 
