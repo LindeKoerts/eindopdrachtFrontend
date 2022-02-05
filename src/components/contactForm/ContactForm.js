@@ -99,11 +99,11 @@ const RegisterForm = () => {
 
             <br/>
 
-            <Button
+            <button
                 className="roze"
             >
                 Register
-            </Button>
+            </button>
 
             <p>Heb je al een account? <Link to='/inloggen' className="signin-link">Log in</Link></p>
         </form>

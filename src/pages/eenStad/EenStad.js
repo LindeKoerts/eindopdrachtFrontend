@@ -80,6 +80,10 @@ function Eenstad() {
                 <div className="start">
                 <h1 className="city-name">{weatherData.name}</h1>
 
+                <div className="temp">
+                    <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
+                </div>
+
                 <div className="discription">
                     <h2>{weatherData.weather[0].description}</h2>
                 </div>
@@ -88,9 +92,6 @@ function Eenstad() {
                 <DayWeather coordinates={weatherData.coord}/>
                 </div>
 
-                <div className="temp">
-                <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
-                </div>
                 </div>
 
                 <div className="six">
