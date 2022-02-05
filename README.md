@@ -30,7 +30,6 @@ Om de pagina's Een stad en Op de fiets te kunnen bekijken zal een account moeten
 Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
 
 ### `npm install`
-###npm install
 
 Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
