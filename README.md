@@ -1,4 +1,4 @@
-# WHATTOWEAR. 
+# WhatToWear. 
 
 # Waarom deze applicatie? 
 
