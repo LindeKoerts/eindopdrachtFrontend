@@ -1,0 +1,18 @@
+.roze {
+    border-radius: 2em;
+    background-color: #FCB4B4;
+    border-color: #FCB4B4;
+    text-align: center;
+    color: black;
+}
+.roze {
+    justify-content: center;
+    margin-right: 6em;
+}
+
+
+@media screen and (max-width: 950px) {
+    .search-button {
+        padding: 5px 10px;
+    }
+}

@@ -1,24 +1,61 @@
-import logo from './logo.svg';
+import React, {useContext} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import {AuthContext} from "./context/AuthContext";
+import OpDeFiets from './pages/opDeFiets/OpDeFiets';
+import EenStad from '../src/pages/eenStad/EenStad';
+import Aanmelden from '../src/pages/aanmelden/Aanmelden'
+import Inloggen from '../src/pages/inloggen/Inloggen'
+import Homepage from '../src/pages/homepage/Homepage'
+import Contact from '../src/pages/contact/Contact'
 import './App.css';
 
 function App() {
+  const { authState: { isAuth } } = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Router>
+          <Switch>
+
+            <Route exact path="/">
+              <Homepage/>
+            </Route>
+
+            <Route path="/opdefiets">
+              { isAuth ? <OpDeFiets/> : <Redirect to='/inloggen'/> }
+            </Route>
+
+            <Route path="/eenstad">
+              { isAuth ? <EenStad/> : <Redirect to='/inloggen'/> }
+
+            </Route>
+
+            <Route path="/contact">
+              <Contact/>
+            </Route>
+
+            <Route path="/inloggen">
+              <Inloggen/>
+            </Route>
+
+            <Route path="/aanmelden">
+              <Aanmelden/>
+            </Route>
+
+          </Switch>
+
+        </Router>
+
+
+      </>
+
+
+
   );
 }
 
