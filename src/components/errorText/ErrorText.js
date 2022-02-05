@@ -1,10 +1,10 @@
-import React from 'react';
-import styles from './ErrorText.module.scss';
+import React from "react";
+import "./ErrorText.css";
 
 const ErrorText = () => {
     return (
         <p className={styles['error-text']}>
-            Something went wrong, please try again later...
+            Er ging iets mis, probeer later opnieuw...
         </p>
     );
 }

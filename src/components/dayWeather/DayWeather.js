@@ -62,7 +62,6 @@ function DayWeather({ coordinates }) {
                 })}
             </div>
 
-
             <div className="legend">
                 {forecasts.map((forecast) => {
                     return <span key={`${forecast.dt}-timestamp`}>{createTimeString}</span>
@@ -71,15 +70,7 @@ function DayWeather({ coordinates }) {
 
             {error && <span>Het ophalen van de voorspellingen is mislukt. Probeer het opnieuw.</span>}
             {loading && (<span>Loading...</span>)}
-
-
         </div>
-
-
-
-
-
-
 
     );
 }

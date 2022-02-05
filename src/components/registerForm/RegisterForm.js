@@ -1,13 +1,10 @@
-import React from 'react';
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import {toast} from "react-toastify";
-
+import "./RegisterForm.css";
 import InputField from "../inputField/InputField";
-import Button from "../button/Button";
-
-import './RegisterForm.css';
 
 const RegisterForm = () => {
     const history = useHistory()
@@ -17,7 +14,7 @@ const RegisterForm = () => {
         const source = axios.CancelToken.source();
 
         try {
-            await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', {
+            await axios.post("https://frontend-educational-backend.herokuapp.com/api/auth/signup", {
                 'username': data.username,
                 'email': data.email,
                 'password': data.password,
@@ -25,9 +22,9 @@ const RegisterForm = () => {
                 cancelToken: source.token,
             })
 
-            history.push('/inloggen');
+            history.push("/inloggen");
 
-            toast('You have successfully registered an account!')
+            toast("Je hebt een account aangemaakt!")
 
             return function cleanup() { source.cancel(); }
 
@@ -77,7 +74,6 @@ const RegisterForm = () => {
             <br/>
             <br/>
 
-
             <InputField
                 labelText='Wachtwoord'
                 inputType='password'
@@ -99,13 +95,13 @@ const RegisterForm = () => {
 
             <br/>
 
-            <Button
+            <button
                 className="roze"
             >
                 Register
-            </Button>
+            </button>
 
-            <p>Heb je al een account? <Link to='/inloggen' className="signin-link">Log in</Link></p>
+            <p>Heb je al een account? <Link to="/inloggen" className="signin-link">Log in</Link></p>
         </form>
     );
 }

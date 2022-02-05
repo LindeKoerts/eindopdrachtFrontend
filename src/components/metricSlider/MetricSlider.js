@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { TempContext } from '../../context/TempContext';
-import './MetricSlider.css';
+import React, { useState, useEffect, useContext } from "react";
+import { TempContext } from "../../context/TempContext";
+import "./MetricSlider.css";
 
 function MetricSlider() {
     const [checked, toggleChecked] = useState(false);

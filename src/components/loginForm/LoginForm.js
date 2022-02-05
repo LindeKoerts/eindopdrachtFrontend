@@ -1,13 +1,10 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState} from "react";
 import { Link } from "react-router-dom";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import { AuthContext } from "../../context/AuthContext";
-
 import InputField from "../inputField/InputField";
-import Button from "../button/Button";
-
-import './LoginForm.css';
+import "./LoginForm.css";
 
 const LoginForm = () => {
     const [credentialError, toggleCredentialError] = useState(false);
@@ -20,8 +17,8 @@ const LoginForm = () => {
         try {
             toggleCredentialError(false);
             const result = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signin', {
-                'username': data.username,
-                'password': data.password,
+                "username": data.username,
+                "password": data.password,
             }, {
                 cancelToken: source.token,
             });
@@ -47,7 +44,7 @@ const LoginForm = () => {
                 placeholder="Gebruikersnaam"
                 register={register}
                 errors={errors}
-                validationRules={{required: 'Username is required'}}
+                validationRules={{required: "Gebruikersnaam is onmisbaar"}}
             />
             <br/>
 
@@ -59,7 +56,7 @@ const LoginForm = () => {
                 placeholder="Wachtwoord"
                 register={register}
                 errors={errors}
-                validationRules={{required: 'Password is required'}}
+                validationRules={{required: "Wachtwoord is onmisbaar!"}}
             />
 
             {credentialError && <p className="error-text">Wrong credentials</p>}
@@ -74,7 +71,7 @@ const LoginForm = () => {
 
             <p>Nog geen account?</p>
             <button className="paars">
-                <Link to='/aanmelden' className="signup-link">Aanmelden</Link>
+                <Link to="/aanmelden" className="signup-link">Aanmelden</Link>
         </button>
         </form>
     );

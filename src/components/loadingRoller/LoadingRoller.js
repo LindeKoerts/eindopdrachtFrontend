@@ -1,9 +1,9 @@
-import React from 'react';
-import styles from './LoadingRoller.css';
+import React from "react";
+import "./LoadingRoller.css";
 
 const LoadingRoller = () => {
     return (
-        <div className={styles['lds-roller']}>
+        <div className="lds-roller">
             <div>
             </div>
             <div>

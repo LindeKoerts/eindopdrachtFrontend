@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
-import axios from 'axios';
-import { TempContext } from '../../context/TempContext';
-import createDateString from '../../helpers/createDateString';
-import '../../pages/eenStad/Eenstad.css';
-import './WeekWeather.css';
+import React, { useState, useEffect, useContext } from "react";
+import axios from "axios";
+import { TempContext } from "../../context/TempContext";
+import createDateString from "../../helpers/createDateString";
+import "../../pages/eenStad/Eenstad.css";
+import "./WeekWeather.css";
 
 const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
@@ -42,7 +42,6 @@ function WeekWeather({ coordinates }) {
             {loading && <span>Loading...</span>}
             {forecasts.length === 0 && !error &&
             <span className="no-forecast">
-          Zoek eerst een locatie om het weer voor deze week te bekijken
         </span>
             }
             {forecasts.map((day) => {

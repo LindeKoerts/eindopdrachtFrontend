@@ -1,9 +1,8 @@
 import React, {createContext, useEffect, useState} from 'react';
 import axios from "axios";
-import jwt_decode from 'jwt-decode';
+import jwt_decode from "jwt-decode";
 import { useHistory } from "react-router-dom";
 import {toast} from "react-toastify";
-
 import checkTokenExpiration from "../helpers/checkTokenExpiration";
 import LoadingRoller from "../components/loadingRoller/LoadingRoller";
 
@@ -14,11 +13,11 @@ const AuthContextProvider = ({ children }) => {
     const [authState, setAuthState] = useState({
         isAuth: false,
         user: null,
-        status: 'pending',
+        status: "pending",
     });
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem("token");
 
         if (token) {
             const decodedToken = jwt_decode(token);
@@ -26,17 +25,17 @@ const AuthContextProvider = ({ children }) => {
             if (checkTokenExpiration(decodedToken.exp)) {
                 const fetchUserData = async () => {
                     try {
-                        const result = await axios.get('https://frontend-educational-backend.herokuapp.com/api/user', {
+                        const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                             headers: {
-                                'Content-Type': 'application/json',
-                                'Authorization': `Bearer ${token}`,
+                                "Content-Type": "application/json",
+                                "Authorization": "Bearer ${token}",
                             }
                         })
 
                         setAuthState({
                             ...authState,
                             isAuth: true,
-                            status: 'done',
+                            status: "done",
                             user: {
                                 username: result.data.username,
                                 email: result.data.email,
@@ -49,7 +48,7 @@ const AuthContextProvider = ({ children }) => {
                         setAuthState({
                             ...authState,
                             isAuth: false,
-                            status: 'done',
+                            status: "done",
                             user: null
                         });
                     }
@@ -57,13 +56,13 @@ const AuthContextProvider = ({ children }) => {
 
                 fetchUserData();
             } else {
-                console.log('Token has been expired, please log in.');
+                console.log("De token is verlopen, graag opnieuw inloggen.");
                 localStorage.clear();
 
                 setAuthState({
                     ...authState,
                     isAuth: false,
-                    status: 'done',
+                    status: "done",
                     user: null
                 });
             }
@@ -71,19 +70,19 @@ const AuthContextProvider = ({ children }) => {
             setAuthState({
                 ...authState,
                 isAuth: false,
-                status: 'done',
+                status: "done",
                 user: null,
             });
         }
     }, [])
 
     const login = ({ accessToken, email, username, id }) => {
-        localStorage.setItem('token', accessToken);
+        localStorage.setItem("token", accessToken);
 
         setAuthState({
             ...authState,
             isAuth: true,
-            status: 'done',
+            status: "done",
             user: {
                 username: username,
                 email: email,
@@ -91,9 +90,9 @@ const AuthContextProvider = ({ children }) => {
             }
         });
 
-        history.push('/');
+        history.push("/");
 
-        toast.success('You have successfully logged in!');
+        toast.success("Je bent ingelogd!");
     }
 
     const logout = () => {
@@ -103,10 +102,10 @@ const AuthContextProvider = ({ children }) => {
             ...authState,
             isAuth: false,
             user: null,
-            status: 'done'
+            status: "done",
         });
 
-        toast.success('You have successfully logged out!');
+        toast.success("Je bent uitgelogd!");
     }
 
     const data = {
@@ -117,7 +116,7 @@ const AuthContextProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={ data }>
-            { authState.status === 'done' ? children : <LoadingRoller /> }
+            { authState.status === "done" ? children : <LoadingRoller /> }
         </AuthContext.Provider>
     );
 }

@@ -12,8 +12,6 @@ import {ReactComponent as Smoke} from "../assets/smiley/smoke.svg";
 import {ReactComponent as Haze} from "../assets/smiley/haze.svg";
 import {ReactComponent as Fog} from "../assets/smiley/fog.svg";
 
-
-
 function smileyMapper(weatherType) {
     switch (weatherType){
         case 'Clear':

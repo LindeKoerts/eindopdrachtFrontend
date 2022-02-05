@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styles from './InputField.css';
-
 const InputField = ({ labelText, inputType = 'text', inputId, inputName, placeholder, register, errors, validationRules }) => {
     return (
         <>
@@ -10,7 +8,7 @@ const InputField = ({ labelText, inputType = 'text', inputId, inputName, placeho
             </label>
 
             <input
-                className={errors[inputName] ? styles['input-error'] : styles.input}
+                className="error"
                 type={inputType}
                 id={inputId}
                 {...register(inputName, validationRules)}

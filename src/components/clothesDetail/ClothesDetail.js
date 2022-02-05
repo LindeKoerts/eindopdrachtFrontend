@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { TempContext } from '../../context/TempContext';
+import React, { useContext } from "react";
+import { TempContext } from "../../context/TempContext";
 import smileyMapper from "../../helpers/smileyMapper";
 
 function WeatherDetail({ description, temp, type }) {

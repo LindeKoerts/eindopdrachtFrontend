@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import { TempContext } from '../../context/TempContext';
-import iconMapper from '../../helpers/iconMapper';
-import './WeatherDetail.css';
+import React, { useContext } from "react";
+import { TempContext } from "../../context/TempContext";
+import iconMapper from "../../helpers/iconMapper";
 
 function WeatherDetail({ description, temp, type }) {
     const { kelvinToMetric } = useContext(TempContext);

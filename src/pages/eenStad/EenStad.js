@@ -4,7 +4,6 @@ import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
 import MetricSlider from "../../components/metricSlider/MetricSlider";
 import WeekWeather from "../../components/weekWeather/WeekWeather";
-import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
 import DayWeather from "../../components/dayWeather/DayWeather";
 import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
@@ -42,7 +41,6 @@ function Eenstad() {
     }, [location]);
 
     return (
-
         <section>
 
         <main className="main-eenstad">
@@ -52,14 +50,10 @@ function Eenstad() {
             <div>
                 <h1 className="header-bike">EEN STAD</h1>
                 <h3 className="intro">De weersvoorspelling in jouw omgeving!</h3>
-
-
             </div>
 
 
             <div className="weather-container">
-
-                {/*HEADER -------------------- */}
                 <div className="weather-header1">
                     <div className="zoek">
                     <SearchBar setLocationHandler={setLocation}/>
@@ -72,7 +66,6 @@ function Eenstad() {
 
                     <span className="location-details">
             {Object.keys(weatherData).length > 0 &&
-
 
             <>
                 <br/>
@@ -116,8 +109,8 @@ function Eenstad() {
                 <div className="metric">
                     <MetricSlider/>
                 </div>
-
             </>
+
             }
           </span>
                 </div>
@@ -126,16 +119,11 @@ function Eenstad() {
                 <WeekWeather coordinates={weatherData.coord}/>
                 </section>
 
-
-
             </div>
         </main>
 
-
-
             <br/>
             <br/>
-
 
             {screenWidth < 950 ? <FooterResp /> : <Footer />}
         </section>

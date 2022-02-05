@@ -1,14 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import { ScreenWidthContext } from "../../context/screenWidthContext";
-import inlog from "../../assets/pictures/img.png"
-
+import inlog from "../../assets/pictures/img.png";
 import NavBar from "../../components/navBar/NavBar";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/loginForm/LoginForm";
 import NavBarResp from "../../components/navBarResp/NavBarResp";
-
-import './Inloggen.css';
-import raam from "../../assets/pictures/Homepage_photo.png";
-
+import "./Inloggen.css";
 
 const LoginPage = () => {
     const { screenWidth } = useContext(ScreenWidthContext);
@@ -28,11 +24,10 @@ const LoginPage = () => {
 
                 <section className="img-container">
                 </section>
-
             </div>
+
         </section>
         </main>
-
     );
 }
 

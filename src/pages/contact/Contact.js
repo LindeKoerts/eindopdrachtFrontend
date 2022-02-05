@@ -1,24 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import NavBar from "../../components/navBar/NavBar";
 import {ScreenWidthContext} from "../../context/screenWidthContext";
 import NavBarResp from "../../components/navBarResp/NavBarResp";
-import Email from '../../assets/pictures/Email.png'
-import Phone from '../../assets/pictures/Phone.png'
-import Contactpage from '../../assets/pictures/contactpage.png'
+import Email from "../../assets/pictures/Email.png";
+import Phone from "../../assets/pictures/Phone.png";
+import Contactpage from "../../assets/pictures/contactpage.png";
 import FooterResp from "../../components/footerResp/FooterResp";
 import Footer from "../../components/footer/Footer";
-import './Contact.css';
+import "./Contact.css";
 import {Link} from "react-router-dom";
 
 function Contact(){
-
     const { screenWidth } = useContext(ScreenWidthContext);
-
 
     return(
 
         <section>
-
             <article className="white-contact">
 
             <div>
@@ -39,17 +36,11 @@ function Contact(){
 
             </article>
                     <button className="roze-contact">
-                        <Link to='/aanmelden'>Aanmelden</Link>
+                        <Link to="/aanmelden">Aanmelden</Link>
                     </button>
 
-
                 <article className="contact-form">
-
-
                 </article>
-
-
-
 
             </article>
 
@@ -60,13 +51,9 @@ function Contact(){
                 {screenWidth < 950 ? <FooterResp /> : <Footer />}
             </div>
 
-
-
         </section>
 
-
-
-    )
+    );
 }
 
 
