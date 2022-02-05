@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# WHATTOWEAR. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Waarom deze applicatie? 
 
-## Available Scripts
+Wonend in Nederland krijgen we de gehele dag te maken met veranderend weer. Zo regent het de ene minuut en schijnt de ander minuut de zon. Daarbij is ook nog eens de ene 18 graden niet de andere 18 graden. Lastig dus! Want hoe zorg je ervoor dat je niet een plensbui op je hoofd krijgt in je zomerkleding? Duidelijk een probleem. Wat dit probleem ook nog eens versterkt is dat je op een dag ook nog eens op verschillende plekken komt waardoor je al helemaal de kluts kwijt bent en daarom heb ik #whattowear. ontwikkeld. 
 
-In the project directory, you can run:
+In deze applicatie kun je het weer opzoeken en krijg je daarbij, door middel van een smiley, meteen te zien waarmee je rekening moet houden qua kledingkeuze. 
+
+Alleen als ingelogde gebruiker krijg je alle pagina's te zien.
+
+Dit project is opgestart met [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Belangrijkste functies 
+
+De belangrijkste functies zijn de vinden op de pagina's Een stad en Op de fiets. Hierin kan een bezoeker de weersvoorspelling bekijken met de kledingsuggestie. Op de pagina Een stad is het mogelijk om 1 plek in te vullen en hiervan een uitgebreide voorspelling te krijgen. Op de pagina Op de fiets kunnen 2 plaatsten worden ingevuld om zo van beide plekken het weer en de kledingsuggestie te krijgen. 
+
+
+
+
+
+## Benodigdheden 
+
+Er wordt gebruik gemaakt van de OpenWeather Api (https://openweathermap.org/api) om de weersvoorspelling op te halen. Bijgevoegd aan het verantwoordingsdocument is de API key te vinden. 
+
+Om de pagina's Een stad en Op de fiets te kunnen bekijken zal een account moeten worden aangemaakt. Dit kan door een account aan te maken bij aanmelden en daarna jezelf in te loggen. Met deze gegevens kan er worden ingelogd. 
+
+## De applicatie starten
+
+Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
+
+### `npm install`
+###npm install
+
+Wanneer dit klaar is, kun je de applicatie starten met behulp van:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+of gebruik de WebStorm knop (npm start). Open http://localhost:3000 om de pagina in de browser te bekijken.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Beschikbare Scripts
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start de testrunner in de interactieve kijkmodus.\ 
+Zie de sectie over [tests uitvoeren](https://facebook.github.io/create-react-app/docs/running-tests) voor meer informatie.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bouwt de app voor productie naar de map `build`. 
+Het bundelt React correct in productiemodus en optimaliseert de build voor de beste prestaties. De build is verkleind en de bestandsnamen bevatten de hashes. De applicatie is dan klaar om te worden geimplementeerd!
