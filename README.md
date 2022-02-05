@@ -1,7 +1,5 @@
 # WhatToWear. 
 
-# Waarom deze applicatie? 
-
 Wonend in Nederland krijgen we de gehele dag te maken met veranderend weer. Zo regent het de ene minuut en schijnt de ander minuut de zon. Daarbij is ook nog eens de ene 18 graden niet de andere 18 graden. Lastig dus! Want hoe zorg je ervoor dat je niet een plensbui op je hoofd krijgt in je zomerkleding? Duidelijk een probleem. Wat dit probleem ook nog eens versterkt is dat je op een dag ook nog eens op verschillende plekken komt waardoor je al helemaal de kluts kwijt bent en daarom heb ik #whattowear. ontwikkeld. 
 
 In deze applicatie kun je het weer opzoeken en krijg je daarbij, door middel van een smiley, meteen te zien waarmee je rekening moet houden qua kledingkeuze. 
