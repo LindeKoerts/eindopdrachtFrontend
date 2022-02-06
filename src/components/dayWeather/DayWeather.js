@@ -5,7 +5,7 @@ import createTimeString from '../../helpers/createTimeString';
 import './DayWeather.css'
 import ClothesDetail from "../clothesDetail/ClothesDetail";
 
-const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
+const apiKey = 'Meegeleverde API KEY hier invullen!';
 
 function DayWeather({ coordinates }) {
     const [forecasts, setForecasts] = useState([]);

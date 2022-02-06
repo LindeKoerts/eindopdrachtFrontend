@@ -9,7 +9,7 @@ import home from "../../assets/pictures/goodhome.svg";
 import city from "../../assets/pictures/stad.svg";
 import whereto from "../../assets/pictures/waarheen.svg"
 import weather from "../../assets/pictures/3.svg";
-import example from "../../assets/pictures/Naamloos-1.png";
+import example from "../../assets/pictures/smiley.png";
 import Footer from "../../components/footer/Footer";
 import FooterResp from "../../components/footerResp/FooterResp";
 import {Link} from "react-router-dom";
@@ -111,7 +111,7 @@ function Homepage(){
                 <img className="resize4" src={example} alt="wat betekenen de icoontjes"/>
             </article>
 
-            <article>
+            <article className="footer-home">
                 {screenWidth < 950 ? <FooterResp /> : <Footer />}
             </article>
 

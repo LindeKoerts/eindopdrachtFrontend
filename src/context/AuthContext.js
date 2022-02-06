@@ -4,7 +4,7 @@ import jwt_decode from "jwt-decode";
 import { useHistory } from "react-router-dom";
 import {toast} from "react-toastify";
 import checkTokenExpiration from "../helpers/checkTokenExpiration";
-import LoadingRoller from "../components/loadingRoller/LoadingRoller";
+import WaitAuth from "../components/waitAuth/WaitAuth";
 
 export const AuthContext = createContext({});
 
@@ -116,7 +116,7 @@ const AuthContextProvider = ({ children }) => {
 
     return (
         <AuthContext.Provider value={ data }>
-            { authState.status === "done" ? children : <LoadingRoller /> }
+            { authState.status === "done" ? children : <WaitAuth /> }
         </AuthContext.Provider>
     );
 }

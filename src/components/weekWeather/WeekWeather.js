@@ -5,7 +5,7 @@ import createDateString from "../../helpers/createDateString";
 import "../../pages/eenStad/Eenstad.css";
 import "./WeekWeather.css";
 
-const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
+const apiKey = 'Meegeleverde API KEY hier invullen!';
 
 function WeekWeather({ coordinates }) {
     const [forecasts, setForecasts] = useState([]);

@@ -1,7 +1,7 @@
 import React from "react";
-import "./LoadingRoller.css";
+import "./WaitAuth.css"
 
-const LoadingRoller = () => {
+const WaitAuth = () => {
     return (
         <div className="lds-roller">
             <div>
@@ -24,4 +24,4 @@ const LoadingRoller = () => {
     );
 }
 
-export default LoadingRoller
+export default WaitAuth;
