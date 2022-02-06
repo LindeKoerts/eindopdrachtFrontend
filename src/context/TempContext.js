@@ -1,22 +1,22 @@
-import React, { createContext, useState } from 'react';
-import kelvinToFahrenheit from '../helpers/kelvinToFahrenheit';
-import kelvinToCelsius from '../helpers/kelvinToCelsius';
+import React, { createContext, useState } from "react";
+import kelvinToFahrenheit from "../helpers/kelvinToFahrenheit";
+import kelvinToCelsius from "../helpers/kelvinToCelsius";
 
 export const TempContext = createContext({});
 
 function TempContextProvider({ children }) {
-    const [selectedMetric, toggleSelectedMetric] = useState('celsius');
+    const [selectedMetric, toggleSelectedMetric] = useState("celsius");
 
     function toggleTemp() {
-        if (selectedMetric === 'celsius') {
-            toggleSelectedMetric('fahrenheit');
+        if (selectedMetric === "celsius") {
+            toggleSelectedMetric("fahrenheit");
         } else {
-            toggleSelectedMetric('celsius');
+            toggleSelectedMetric("celsius");
         }
     }
 
     function kelvinToMetric(kelvin) {
-        if (selectedMetric === 'celsius') {
+        if (selectedMetric === "celsius") {
             return kelvinToCelsius(kelvin);
         } else {
             return kelvinToFahrenheit(kelvin);

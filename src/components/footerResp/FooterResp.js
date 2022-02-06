@@ -1,7 +1,5 @@
 import React from "react";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-
-import './FooterResp.css'
+import "./FooterResp.css";
 
 function FooterResp() {
 
@@ -25,15 +23,9 @@ function FooterResp() {
                     <h3 className="headerResp">Get in touch</h3>
                     <p className="footer-textResp">Deel jouw ultieme #WhatToWear. moment via social media en gebruik (hoe kan het ook anders) de #WhatToWear.! We kijken uit naar jullie online kiekjes.</p>
                 </aside>
-
             </div>
 
-
         </article>
-
-
-
-
     );
 }
 

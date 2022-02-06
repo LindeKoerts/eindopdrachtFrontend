@@ -10,9 +10,9 @@ const ScreenWidthContextProvider = ({ children }) => {
             setScreenWidth(window.innerWidth);
         }
 
-        window.addEventListener('resize', changeWidth);
+        window.addEventListener("resize", changeWidth);
 
-        return () => window.removeEventListener('resize', changeWidth);
+        return () => window.removeEventListener("resize", changeWidth);
     }, [])
 
     const data = {

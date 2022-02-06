@@ -209,7 +209,6 @@ body {
     position: absolute;
     left: 0.8em;
     margin: 6em;
-
 }
 
 .icon {
@@ -320,6 +319,14 @@ body {
     }
 
 
+    .resize4 {
+        width: 250px;
+        margin-top: 8em;
+    }
+
+
+
+
 }
 
 @media screen and (max-width: 950px) {
@@ -360,13 +367,27 @@ body {
         height: 18em;
     }
 
-    .resize4 {
-        position: relative;
-
+    .resize2 {
+        width: 60%;
+        margin-top: 35em;
     }
 
+    .blue {
+        width: auto;
+    }
 
+    .resize4 {
+        width: 50%;
+        margin-top: 45em;
+    }
 
+    .white2 {
+        margin-top: 25em;
+    }
+
+    .footer-home {
+        margin-top: 25em;
+    }
 
 
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { TempContext } from "../../context/TempContext";
-import iconMapper from "../../helpers/iconMapper";
+import smileyMapper from "../../helpers/smileyMapper";
 
 function WeatherDetail({ description, temp, type }) {
     const { kelvinToMetric } = useContext(TempContext);
@@ -8,7 +8,7 @@ function WeatherDetail({ description, temp, type }) {
     return (
         <section className="day-part">
       <span className="icon-wrapper">
-        {iconMapper(type)}
+        {smileyMapper(type)}
       </span>
             <p className="description">{description}</p>
             <p>{kelvinToMetric(temp)}</p>

@@ -4,7 +4,6 @@ import axios from "axios";
 import SearchBar from "../../components/searchBar/SearchBar";
 import MetricSlider from "../../components/metricSlider/MetricSlider";
 import WeekWeather from "../../components/weekWeather/WeekWeather";
-import WeatherDetail from "../../components/weatherDetail/WeatherDetail";
 import DayWeather from "../../components/dayWeather/DayWeather";
 import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
@@ -12,7 +11,7 @@ import FooterResp from "../../components/footerResp/FooterResp";
 import NavBarResp from "../../components/navBarResp/NavBarResp";
 import {ScreenWidthContext} from "../../context/screenWidthContext";
 
-const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
+const apiKey = 'Meegeleverde API KEY hier invullen!';
 
 function Eenstad() {
     const [weatherData, setWeatherData] = useState({});
@@ -42,7 +41,6 @@ function Eenstad() {
     }, [location]);
 
     return (
-
         <section>
 
         <main className="main-eenstad">
@@ -52,14 +50,10 @@ function Eenstad() {
             <div>
                 <h1 className="header-bike">EEN STAD</h1>
                 <h3 className="intro">De weersvoorspelling in jouw omgeving!</h3>
-
-
             </div>
 
 
             <div className="weather-container">
-
-                {/*HEADER -------------------- */}
                 <div className="weather-header1">
                     <div className="zoek">
                     <SearchBar setLocationHandler={setLocation}/>
@@ -73,12 +67,15 @@ function Eenstad() {
                     <span className="location-details">
             {Object.keys(weatherData).length > 0 &&
 
-
             <>
                 <br/>
                 <br/>
                 <div className="start">
                 <h1 className="city-name">{weatherData.name}</h1>
+
+                <div className="temp">
+                    <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
+                </div>
 
                 <div className="discription">
                     <h2>{weatherData.weather[0].description}</h2>
@@ -88,9 +85,6 @@ function Eenstad() {
                 <DayWeather coordinates={weatherData.coord}/>
                 </div>
 
-                <div className="temp">
-                <h1>{kelvinToMetric(weatherData.main.temp)}</h1>
-                </div>
                 </div>
 
                 <div className="six">
@@ -115,8 +109,8 @@ function Eenstad() {
                 <div className="metric">
                     <MetricSlider/>
                 </div>
-
             </>
+
             }
           </span>
                 </div>
@@ -125,16 +119,11 @@ function Eenstad() {
                 <WeekWeather coordinates={weatherData.coord}/>
                 </section>
 
-
-
             </div>
         </main>
 
-
-
             <br/>
             <br/>
-
 
             {screenWidth < 950 ? <FooterResp /> : <Footer />}
         </section>

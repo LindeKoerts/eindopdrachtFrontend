@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import WeatherDetail from '../weatherDetail/WeatherDetail';
 import createTimeString from '../../helpers/createTimeString';
-import '../dayWeather/DayWeather.css'
+import './DayWeather.css'
+import ClothesDetail from "../clothesDetail/ClothesDetail";
 
-const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
+const apiKey = 'Meegeleverde API KEY hier invullen!';
 
 function DayWeather({ coordinates }) {
     const [forecasts, setForecasts] = useState([]);
@@ -45,9 +46,21 @@ function DayWeather({ coordinates }) {
                     return <WeatherDetail
                         type={forecast.weather[0].main}
                     />
+
                 })}
             </div>
 
+            <div className="chart1">
+                <div>
+                <h2 className="kleur">#WhatToWear. ->  </h2>
+            </div>
+                {forecasts.map((forecast) => {
+                    return <ClothesDetail
+                        type={forecast.weather[0].main}
+                    />
+
+                })}
+            </div>
 
             <div className="legend">
                 {forecasts.map((forecast) => {
@@ -57,12 +70,7 @@ function DayWeather({ coordinates }) {
 
             {error && <span>Het ophalen van de voorspellingen is mislukt. Probeer het opnieuw.</span>}
             {loading && (<span>Loading...</span>)}
-
         </div>
-
-
-
-
 
     );
 }

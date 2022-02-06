@@ -5,7 +5,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {TempContext} from "../../context/TempContext";
 import axios from "axios";
 
-const apiKey = 'e265816c2efb5c38bf3bc3fe7dfe63d9';
+const apiKey = 'Meegeleverde API KEY hier invullen!';
 
 function OpDeFietsWeather() {
     const [weatherData, setWeatherData] = useState({});
@@ -37,7 +37,6 @@ function OpDeFietsWeather() {
 
     <div className="weather-container">
 
-        {/*HEADER -------------------- */}
         <div className="weather-header">
             <SearchBar setLocationHandler={setLocation}/>
             {error &&
@@ -64,7 +63,7 @@ function OpDeFietsWeather() {
 
         <MetricSlider/>
     </div>
-    )
+    );
 
 }
 

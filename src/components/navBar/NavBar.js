@@ -1,11 +1,10 @@
 import React, {useContext, useState} from "react";
 import {NavLink} from "react-router-dom";
 import { toast } from "react-toastify";
-import { FaUserAlt } from 'react-icons/fa';
+import { FaUserAlt } from "react-icons/fa";
 import {AuthContext} from "../../context/AuthContext";
-
-import styles from './NavBar.css';
-import 'react-toastify/dist/ReactToastify.css';
+import "./NavBar.css"
+import "react-toastify/dist/ReactToastify.css";
 
 function NavBar(){
     const { logout, authState: { isAuth, user} } = useContext(AuthContext);
@@ -22,33 +21,30 @@ function NavBar(){
                 <ul className="nav-links">
 
                     <li onClick={notify}>
-                        <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/opdefiets">Op de fiets</NavLink>
+                        <NavLink exact activeClassName="active-link" className="nav-item" to="/opdefiets">Op de fiets</NavLink>
                     </li>
 
                     <li onClick={notify}>
-                        <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/eenstad">Een stad</NavLink>
+                        <NavLink exact activeClassName="active-link" className="nav-item" to="/eenstad">Een stad</NavLink>
                     </li>
 
                     <li>
-                        <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/contact">Contact</NavLink>
+                        <NavLink exact activeClassName="active-link" className="nav-item" to="/contact">Contact</NavLink>
                     </li>
 
                     <li>
-                        <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/inloggen">Inloggen</NavLink>
+                        <NavLink exact activeClassName="active-link" className="nav-item" to="/inloggen">Inloggen</NavLink>
                     </li>
 
                     <li>
-                        <NavLink exact activeClassName={styles['active-link']} className={styles['register-nav-item']} to="/aanmelden">Aanmelden</NavLink>
+                        <NavLink exact activeClassName="active-link" className="register-nav-item" to="/aanmelden">Aanmelden</NavLink>
                     </li>
                         </ul>
 
             </div>
-
         </nav>
-
             :
         <div>
-
             <nav>
                 <div className="nav-container">
                     <NavLink className="logo" to="/" exact activeClassName="active-link"><h2>#WhatToWear.</h2></NavLink>
@@ -56,46 +52,38 @@ function NavBar(){
                     <ul className="nav-links">
 
                         <li>
-                            <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/opdefiets">Op de fiets</NavLink>
+                            <NavLink exact activeClassName="active-link" className="nav-item" to="/opdefiets">Op de fiets</NavLink>
                         </li>
 
                         <li>
-                            <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/eenstad">Een stad</NavLink>
+                            <NavLink exact activeClassName="active-link" className="nav-item" to="/eenstad">Een stad</NavLink>
                         </li>
 
                         <li>
-                            <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/contact">Contact</NavLink>
+                            <NavLink exact activeClassName="active-link" className="nav-item" to="/contact">Contact</NavLink>
                         </li>
 
                         <li>
-                            <NavLink exact activeClassName={styles['active-link']} className={styles['nav-item']} to="/inloggen">Inloggen</NavLink>
+                            <NavLink exact activeClassName="active-link" className="nav-item" to="/inloggen">Inloggen</NavLink>
                         </li>
 
                         <li>
-                            <NavLink exact activeClassName={styles['active-link']} className={styles['register-nav-item']} to="/aanmelden">Aanmelden</NavLink>
+                            <NavLink exact activeClassName="active-link" className="register-nav-item" to="/aanmelden">Aanmelden</NavLink>
                         </li>
                     </ul>
                 </div>
 
-                <div className={styles.account}
+                <div className="account"
                      onMouseOver={() => toggleIsHovering(true)}
                      onMouseOut={() => toggleIsHovering(false)}
                 >
                     <FaUserAlt />
-                    <span className={styles.username}>
-                        {isHovering ? <span onClick={logout}>Log Out</span> : <span>{user.username}</span>}
+                    <span className="username">
+                        {isHovering ? <span onClick={logout}>Uitloggen</span> : <span>{user.username}</span>}
                     </span>
                 </div>
-
             </nav>
-
-
-
         </div>
-
-
-
-
     );
 }
 
