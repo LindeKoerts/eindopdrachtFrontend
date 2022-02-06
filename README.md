@@ -24,7 +24,7 @@ De belangrijkste functies zijn de vinden op de pagina's Een stad en Op de fiets.
 
 Wanneer de installatie gelukt is, zal de API key moeten worden toegevoegd op de pagina Een stad. En bij de componenten WeekWeather, OpDeFietsWeather en DayWeather. Er wordt gebruik gemaakt van de OpenWeather Api (https://openweathermap.org/api) om de weersvoorspelling op te halen. Bijgevoegd aan het verantwoordingsdocument is de API key te vinden. Maar ik zal hem voor de gemakkelijkheid hier ook toevoegen. 
 
-API KEY: #'e265816c2efb5c38bf3bc3fe7dfe63d9';
+API KEY: ###'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
 
 
