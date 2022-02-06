@@ -14,46 +14,36 @@ Dit project is opgestart met [Create React App](https://github.com/facebook/crea
 ## De applicatie starten
 Om te beginnen moet eerst het project eerst worden gecloned naar de eigen lokale machine. Wanneer dat gelukt is, run je het volgende commando om alle node-modules te installeren: 
 
-
-
-## Belangrijkste functies 
-
-De belangrijkste functies zijn de vinden op de pagina's Een stad en Op de fiets. Hierin kan een bezoeker de weersvoorspelling bekijken met de kledingsuggestie. Op de pagina Een stad is het mogelijk om 1 plek in te vullen en hiervan een uitgebreide voorspelling te krijgen. Op de pagina Op de fiets kunnen 2 plaatsten worden ingevuld om zo van beide plekken het weer en de kledingsuggestie te krijgen. 
-
 ### `npm install`
 
 Wanneer de installatie gelukt is, zal de API key moeten worden toegevoegd op de pagina Een stad. En bij de componenten WeekWeather, OpDeFietsWeather en DayWeather. Er wordt gebruik gemaakt van de OpenWeather Api (https://openweathermap.org/api) om de weersvoorspelling op te halen. Bijgevoegd aan het verantwoordingsdocument is de API key te vinden. Maar ik zal hem voor de gemakkelijkheid hier ook toevoegen. 
 
-API KEY: ###'e265816c2efb5c38bf3bc3fe7dfe63d9';
+API KEY: 'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
-
-
-## Benodigdheden 
-
-Er wordt gebruik gemaakt van de OpenWeather Api (https://openweathermap.org/api) om de weersvoorspelling op te halen. Bijgevoegd aan het verantwoordingsdocument is de API key te vinden. 
-
-Om de pagina's Een stad en Op de fiets te kunnen bekijken zal een account moeten worden aangemaakt. Dit kan door een account aan te maken bij aanmelden en daarna jezelf in te loggen. Met deze gegevens kan er worden ingelogd. 
-
-## De applicatie starten
-
-Als je het project gecloned hebt naar jouw locale machine, installeer je eerst de node_modules door het volgende commando in de terminal te runnen:
-
-### `npm install`
-
-Wanneer dit klaar is, kun je de applicatie starten met behulp van:
+Wanneer de API KEY is toegevoegd aan het project, run je het volgende commando in de terminal om de applicatie te kunnen starten: 
 
 ### `npm start`
 
-of gebruik de WebStorm knop (npm start). Open http://localhost:3000 om de pagina in de browser te bekijken.
+Open http://localhost:3000 om de pagina in de browser te bekijken.
 
-## Beschikbare Scripts
 
-### `npm test`
+## Account aanmaken
 
-Start de testrunner in de interactieve kijkmodus.\ 
-Zie de sectie over [tests uitvoeren](https://facebook.github.io/create-react-app/docs/running-tests) voor meer informatie.
+Om de pagina's Een stad en Op de fiets te kunnen bekijken, zal een account moeten worden aangemaakt. Dit kan door een account aan te maken bij aanmelden. Klik op de knop "Aanmelden" om naar de aanmeld-pagina te navigeren. Voer een gebruikersnaam, geldig emailadres en wachtwoord in. De gebruikersnaam en het wachtwoord bevatten minimaal 6 karakters. Na een succesvolle registratie wordt je doorgestuurd naar de login-pagina, waar je vervolgens met het aangemaakte account kunt inloggen. Linksbovenin kun je weer uitloggen en zien wanneer je bent ingelogd. 
 
-### `npm run build`
+## Op de fiets 
+http://localhost:3000/opdefiets 
 
-Bouwt de app voor productie naar de map `build`. 
-Het bundelt React correct in productiemodus en optimaliseert de build voor de beste prestaties. De build is verkleind en de bestandsnamen bevatten de hashes. De applicatie is dan klaar om te worden geimplementeerd!
+Op deze pagina kun je twee plekken invoeren, die je dan kunt vergelijken met elkaar. Na het invullen van de plekken komt de weersvoorspelling naar boven en komt hier ook je kledingsuggestie te staan. 
+
+https://user-images.githubusercontent.com/89732018/152675278-42f8a0a1-f8c6-44d2-9423-28ff54793dbf.mov
+
+
+## Een stad 
+http://localhost:3000/eenstad
+
+Op deze pagina kun je een uitgebreide weersvoorspelling vinden van enkel 1 plek. Ook hier komt een kledingsuggestie te staan. 
+
+https://user-images.githubusercontent.com/89732018/152675316-77b7c16d-248c-4d34-ac03-e13f62cd05ba.mov
+
+
