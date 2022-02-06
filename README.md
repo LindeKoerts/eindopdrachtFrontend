@@ -6,14 +6,25 @@ In deze applicatie kun je het weer opzoeken en krijg je daarbij, door middel van
 
 Alleen als ingelogde gebruiker krijg je alle pagina's te zien.
 
-Dit project is opgestart met [Create React App](https://github.com/facebook/create-react-app).
+Dit project is opgestart met [Create React App](https://github.com/facebook/create-react-app). En is onderdeel van de leerlijn frontend van NOVI. 
+
+<img width="1918" alt="Homepage" src="https://user-images.githubusercontent.com/89732018/152674714-2171bdbf-56ec-45f0-97eb-04884733f046.png">
+
+
+## De applicatie starten
+Om te beginnen moet eerst het project eerst worden gecloned naar de eigen lokale machine. Wanneer dat gelukt is, run je het volgende commando om alle node-modules te installeren: 
+
 
 
 ## Belangrijkste functies 
 
 De belangrijkste functies zijn de vinden op de pagina's Een stad en Op de fiets. Hierin kan een bezoeker de weersvoorspelling bekijken met de kledingsuggestie. Op de pagina Een stad is het mogelijk om 1 plek in te vullen en hiervan een uitgebreide voorspelling te krijgen. Op de pagina Op de fiets kunnen 2 plaatsten worden ingevuld om zo van beide plekken het weer en de kledingsuggestie te krijgen. 
 
+### `npm install`
 
+Wanneer de installatie gelukt is, zal de API key moeten worden toegevoegd op de pagina Een stad. En bij de componenten WeekWeather, OpDeFietsWeather en DayWeather. Er wordt gebruik gemaakt van de OpenWeather Api (https://openweathermap.org/api) om de weersvoorspelling op te halen. Bijgevoegd aan het verantwoordingsdocument is de API key te vinden. Maar ik zal hem voor de gemakkelijkheid hier ook toevoegen. 
+
+API KEY: #'e265816c2efb5c38bf3bc3fe7dfe63d9';
 
 
 
